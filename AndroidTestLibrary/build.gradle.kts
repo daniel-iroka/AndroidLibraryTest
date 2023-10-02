@@ -45,15 +45,29 @@ dependencies {
 }
 
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.daniel-iroka"
-            artifactId = "androidTestLibrary"
-            version = "1.0"
+//publishing {
+//    publications {
+//        register<MavenPublication>("release") {
+//            groupId = "com.github.daniel-iroka"
+//            artifactId = "androidTestLibrary"
+//            version = "1.0"
+//
+//            afterEvaluate {
+//                from(components["release"])
+//            }
+//        }
+//    }
+//}
 
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
                 from(components["release"])
+
+                groupId = "com.github.daniel-iroka"
+                artifactId = "androidTestLibrary"
+                version = "1.0"
             }
         }
     }
