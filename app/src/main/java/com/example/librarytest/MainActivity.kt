@@ -2,7 +2,6 @@ package com.example.librarytest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.testlibrary.CustomToast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,6 +9,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        CustomToast.showToast(this, "This is a simple Toast message!")
+//        CustomToast.showToast(this, "This is a simple Toast message!")
     }
 }
