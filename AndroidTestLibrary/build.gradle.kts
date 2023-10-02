@@ -4,7 +4,6 @@ plugins {
     id("maven-publish")
 }
 
-
 android {
     namespace = "com.example.testlibrary"
     compileSdk = 33
@@ -43,21 +42,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
-
-
-//publishing {
-//    publications {
-//        register<MavenPublication>("release") {
-//            groupId = "com.github.daniel-iroka"
-//            artifactId = "androidTestLibrary"
-//            version = "1.0"
-//
-//            afterEvaluate {
-//                from(components["release"])
-//            }
-//        }
-//    }
-//}
 
 afterEvaluate {
     publishing {
